@@ -1,0 +1,14 @@
+{
+  "link_cards": [
+    {
+      "title": "Kelutral",
+      "link": "https://kelutral.org/",
+      "image": "",
+      "description": "Our partner server Kelutral.org\nHome of OmatiCon and Na'vi language teaching.",
+      "tags": [
+        "discord-tag",
+        "partner-tag"
+      ]
+    }
+  ]
+}
