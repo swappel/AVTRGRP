@@ -131,6 +131,17 @@ section {
 
     align-items: center;
     justify-content: center;
+
+    width: fit-content;
+    box-sizing: border-box;
+
+    padding: 15px;
+    padding-inline: 100px;
+  }
+
+  #membercount {
+    padding: 0;
+    text-wrap: pretty;
   }
 
   .discord-server-name {

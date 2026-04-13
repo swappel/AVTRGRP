@@ -1,5 +1,14 @@
+// TODO: Add Lenis
 // TODO: Implement dark light detection
 // TODO: Make cards from JSON work
+
+import Lenis from 'lenis';
+
+const lenis = new Lenis({
+  autoRaf: true,
+  lerp: 0.05,
+  wheelMultiplier: 1.5,
+});
 
 async function loadJSONFiles(){
     // Fetch both JSON files and only then continue
