@@ -1,7 +1,145 @@
 :root {
+  --background-dark:  #36393F;
+  --background-light: #FFF;
+  --header-bg-dark: #000;
+  --header-bg-light: #CCC;
 
+  --text-main-dark:   #BBB;
+  --text-main-light:  #999;
+
+  --accent-color: #e77800;
+  --accent-color-highlight: #e79e3d;
+
+  --main-blur-value:  10px;
+  --frost-blur-value: 6px;
+
+  --font: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
+
+  background-color: var(--background-dark);
+  color: var(--text-main-dark);
+
+  font-family: var(--font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--header-bg-dark);
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  img {
+    margin: 0;
+    padding: 10px;
+
+    max-height: 30px;
+  }
+
+  nav {
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+
+    gap: 15px;
+  }
+
+  // TODO: Add dark/light container
+}
+
+.discord-join-btn {
+  padding: 15px;
+
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+}
+
+.discord-join-btn:hover {
+  background-color: var(--accent-color-highlight);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0 15px;
+}
+
+.full-section {
+  height: 100vh;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.section-subtitle {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.section-content {
+  width: 90%;
+}
+
+#start-section {
+
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  p {
+    text-align: left;
+
+    margin-left: 10px;
+    width: 40%;
+  }
+
+  .discord-stats {
+    background-color: #56595F;
+
+    border: none;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0 20px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .discord-server-name {
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  .discord-servericon {
+    border-radius: 100%;
+  }
 }
