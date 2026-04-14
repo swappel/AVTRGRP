@@ -1,4 +1,5 @@
- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
 
@@ -124,13 +125,19 @@
 
             <!-- TODO: Make the cards in JS based off of the JSON files. Delete below. Only for demo purposes. -->
 
-            <div class="section-content">
+            <div class="section-content" id="card-container">
                 <div class="link-card">
-                    <img src="" alt="">
-                    <h3 class="link-card-title"></h3>
+                    <img class="card-image" src="https://i.etsystatic.com/25504546/r/isla/953cf1/59609489/isla_180x180.59609489_6wpdbv37.jpg" alt="Kelutral Icon">
+                    <h3 class="link-card-title">Kelutral.org</h3>
                     <ul class="link-card-taglist">
                         <!-- TODO: Complete tag list(s) -->
-                        <li class="link-card-tag"></li>
+                        <li class="link-card-tag" style="background: var(--discord-color); color: white">Discord</li>
+                        <li class="link-card-tag" style="background: #FF0000">Partner</li>
+                        <li class="link-card-tag" style="background: limegreen">Language Learning</li>
+                    </ul>
+                    <ul class="link-card-button-list">
+                        <li class="link-card-button discord-join-btn"><a href="https://discord.com/invite/kelutral">Discord</a></li>
+                        <li class="link-card-button standard-btn"><a href="https://kelutral.org/">Website</a></li>
                     </ul>
                 </div>
 

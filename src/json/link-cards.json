@@ -2,12 +2,23 @@
   "link_cards": [
     {
       "title": "Kelutral",
-      "link": "https://kelutral.org/",
       "icon": "",
       "description": "Our partner server Kelutral.org\nHome of OmatiCon, Na'vigation and Na'vi language learning.",
       "tags": [
         "discord-tag",
         "partner-tag"
+      ],
+      "buttons": [
+        {
+          "text": "Discord",
+          "link": "https://discord.com/invite/kelutral",
+          "type": "discord"
+        },
+        {
+          "text": "Website",
+          "link": "https://kelutral.org/",
+          "type": "standard"
+        }
       ]
     }
   ]

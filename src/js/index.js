@@ -34,4 +34,12 @@ function parseJSONData(cards, tags) {
     });
 }
 
+function renderCards(cards, tags) {
+    const card_container = document.getElementById('card-container');
+
+    const html = cards.map(card => {
+
+    });
+}
+
 loadJSONFiles();

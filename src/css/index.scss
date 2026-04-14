@@ -7,6 +7,9 @@
   --text-main-dark:   #FFF;
   --text-main-light:  #999;
 
+  --discord-color: #5865F2;
+  --discord-color-highlight: #7289DA;
+
   --accent-color: #e77800;
   --accent-color-highlight: #e79e3d;
 
@@ -23,6 +26,8 @@ body {
   color: var(--text-main-dark);
 
   font-family: var(--font);
+
+  font-size: larger;
 }
 
 a {
@@ -67,16 +72,49 @@ header {
   // TODO: Add dark/light container
 }
 
+.card-image {
+  border-radius: 100%;
+
+  scale: 10%;
+}
+
 .discord-join-btn {
   padding: 15px;
 
-  background-color: var(--accent-color);
+  width: fit-content;
+
+  padding: 5px;
+
+  background-color: var(--discord-color);
   border: none;
   border-radius: 5px;
+
+  transition: 0.3s;
 }
 
+// TODO: Add an animation for an arrow on the irght of the text
 .discord-join-btn:hover {
-  background-color: var(--accent-color-highlight);
+  background-color: var(--discord-color-highlight);
+  text-shadow: #FFF 5px 3px;
+}
+
+#card-container {
+  display: grid;
+
+  grid-column-gap: 30px;
+  grid-auto-flow: column;
+}
+
+.link-card-tag {
+  display: flex;
+
+  border: none;
+  border-radius: 100%;
+
+  text-wrap: nowrap;
+
+  box-sizing: content-box;
+  padding: 6px;
 }
 
 section {
@@ -127,7 +165,7 @@ section {
     display: flex;
     flex-direction: column;
 
-    gap: 0 20px;
+    gap: 10px;
 
     align-items: center;
     justify-content: center;
