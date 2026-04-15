@@ -36,40 +36,43 @@ a {
 }
 
 header {
-  background-color: var(--header-bg-dark);
+  position: fixed;
 
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 8vh;
 
+  padding: 0 5%;
+
+  box-sizing: border-box;
+
+  // Only for testing adding bg color
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 60%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.header-side {
   display: flex;
   flex-direction: row;
 
   align-items: center;
 
-  img {
-    margin: 0;
-    padding: 10px;
+  height: 100%;
 
-    max-height: 30px;
-  }
+  font-size: x-large;
 
-  nav {
-    align-self: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  ul{
-    display: flex;
-    flex-direction: row;
-
-    list-style: none;
-
-    gap: 15px;
-  }
-
-  // TODO: Add dark/light container
+  gap: 15px;
 }
 
 .card-image {
@@ -79,11 +82,9 @@ header {
 }
 
 .discord-join-btn {
-  padding: 15px;
+  padding: 10px;
 
   width: fit-content;
-
-  padding: 5px;
 
   background-color: var(--discord-color);
   border: none;

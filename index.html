@@ -36,22 +36,25 @@
 <body class="lenis-smooth">
 
     <header id="screen-top">
-        <img id="avtr-icon-top" src="public/avatar-a.ico">
+      <div class="header-side left-side">
+        <img id="avtr-icon-top" src="public/avatar-a.ico" alt='Avatar "A"'>
+        <h3 id="header-avtrgrp">AVTRGRP</h3>
+      </div>
 
-        <nav class="site-nav">
-            <ul>
-                <li><a class="nav-element" href="#screen-top">Start</a></li>
-                <li><a href="#start-section">The Discord</a></li>
-                <li><a href="#other-links-section">Other links</a></li>
-            </ul>
+      <div class="header-side right-side">
+        <a href=""><button class="discord-join-btn" type="button">Join Discord</button></a>
 
-            <a href=""><button class="discord-join-btn" type="button">Join Discord</button></a>
-
-            <div class="light-dark-switch-container">
-                <!-- TODO: Implement the light-dark switch -->
-            </div>
-        </nav>
+        <div class="light-dark-switch-container">
+          <!-- TODO: Implement the light-dark switch -->
+        </div>
+      </div>
     </header>
+
+<!--    <nav id="side-scroll-bar">-->
+<!--      <svg width="30" height="400" viewBox="0 0 30 400" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <line x1="15" y1="0" x2="15" y2="400" stroke="#FFF" stroke-width="2" />-->
+<!--      </svg>-->
+<!--    </nav>-->
 
     <main>
         <section class="full-section" id="start-section">
@@ -70,7 +73,7 @@
 
                     <div id="server-div">
                         <h4>Member count</h4>
-                        <p id="membercount">18,123 Members</p>
+                        <p id="membercount">18,183 Members</p>
 
                         <a href=""><button class="discord-join-btn" type="button">Join Discord</button></a>
                     </div>
