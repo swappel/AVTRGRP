@@ -17,6 +17,9 @@
   --frost-blur-value: 6px;
 
   --font: "Roboto", sans-serif;
+
+  --link-card-bg: #46494F;
+  --link-tag-bg: #56595F;
 }
 
 body {
@@ -33,6 +36,19 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: none;
+}
+
+.standard-btn {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  a{
+    height: 100%;
+    width: 100%;
+  }
 }
 
 header {
@@ -73,74 +89,6 @@ header {
   font-size: x-large;
 
   gap: 15px;
-}
-
-.card-image {
-  border-radius: 100%;
-
-  scale: 10%;
-}
-
-.discord-join-btn {
-  padding: 10px;
-
-  width: fit-content;
-
-  background-color: var(--discord-color);
-  border: none;
-  border-radius: 5px;
-
-  transition: 0.3s;
-}
-
-// TODO: Add an animation for an arrow on the irght of the text
-.discord-join-btn:hover {
-  background-color: var(--discord-color-highlight);
-  text-shadow: #FFF 5px 3px;
-}
-
-#card-container {
-  display: grid;
-
-  grid-column-gap: 30px;
-  grid-auto-flow: column;
-}
-
-.link-card-tag {
-  display: flex;
-
-  border: none;
-  border-radius: 100%;
-
-  text-wrap: nowrap;
-
-  box-sizing: content-box;
-  padding: 6px;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0 15px;
-}
-
-.full-section {
-  height: 100vh;
-}
-
-.section-title {
-  font-weight: 600;
-  font-size: xx-large;
-}
-
-.section-subtitle {
-  font-weight: 600;
-  font-size: x-large;
-}
-
-.section-content {
-  width: 90%;
 }
 
 #start-section {
@@ -191,5 +139,239 @@ section {
 
   .discord-servericon {
     border-radius: 100%;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0 15px;
+}
+
+.full-section {
+  height: 100vh;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.section-subtitle {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.section-content {
+  width: 90%;
+}
+
+.discord-join-btn {
+
+  padding: 10px;
+
+  width: fit-content;
+
+  background-color: var(--discord-color);
+  border: none;
+  border-radius: 5px;
+
+  transition: 0.3s;
+
+  text-wrap: nowrap;
+
+  a {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    font-weight: 700;
+  }
+
+  img {
+    height: 20px;
+    object-fit: contain;
+  }
+}
+
+// TODO: Add an animation for an arrow on the irght of the text
+.discord-join-btn:hover {
+  background-color: var(--discord-color-highlight);
+}
+
+#card-container {
+  display: grid;
+
+  width: 90%;
+  margin: 40px;
+
+  gap: 30px;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.link-card {
+  background-color: var(--link-card-bg);
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 13px;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card-image {
+  width: 64px;
+  height: 64px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  margin: 0 0 5px;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.link-card-title {
+  margin: 0;
+  font-size: 1.25em;
+  color: var(--text-main-dark);
+}
+
+.link-card-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #CCD0D3;
+
+  margin-bottom: 20px;
+
+  flex-grow: 1;
+}
+
+.link-card-taglist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 15px 0;
+  padding: 0;
+}
+
+.link-card-tag {
+  display: flex;
+
+  background-color: var(--link-tag-bg);
+
+  border: none;
+  border-radius: 15px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  width: fit-content;
+
+  text-wrap: nowrap;
+
+  box-sizing: content-box;
+  padding: 6px;
+  padding-inline: 10px;
+}
+
+.link-card-button-list {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 20px;
+  list-style: none;
+
+  padding: 0;
+
+}
+
+.link-card-button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    box-sizing: border-box;
+
+    gap: 8px;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  &.standard-btn a {
+    background-color: rgba(255, 255, 255, 0.05);
+
+    color: #CCD0D3;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    img {
+      width: 20px;
+      opacity: 0.7;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #FFF;
+      border-color: rgba(255, 255, 255, 0.2);
+
+      img {
+        transform: translateX(3px);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.discord-join-btn {
+  padding: 10px;
+  width: fit-content;
+  background-color: var(--discord-color);
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-wrap: nowrap;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-weight: 700;
+    color: white;
+  }
+
+  &:hover {
+    background-color: var(--discord-color-highlight);
   }
 }
