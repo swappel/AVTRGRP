@@ -3,6 +3,7 @@
 // TODO: Make cards from JSON work
 
 import Lenis from 'lenis';
+import '/src/css/index.scss';
 
 const lenis = new Lenis({
   autoRaf: true,
