@@ -4,7 +4,7 @@
   @media (max-width: 480px) {
 
   }
- */
+*/
 
 :root {
   --background-dark:  #36393F;
@@ -69,14 +69,14 @@ a {
 }
 
 .discord-join-btn {
-  display: inline-flex; // Allows it to fit content size naturally
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding: 8px 16px; // Standardized padding
+  padding: 8px 16px;
   background-color: var(--discord-color);
   border: none;
-  border-radius: 8px; // Matching your card border-radius style
+  border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
   width: fit-content;
@@ -86,17 +86,17 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 8px; // Space between logo and text
+    gap: 8px;
     font-weight: 700;
     color: white;
-    font-size: 0.95rem; // Matching your card button font size
+    font-size: 0.95rem;
     text-wrap: nowrap;
     width: 100%;
     height: 100%;
   }
 
   img {
-    height: 1.2rem; // Scales based on the text height
+    height: 1.2rem;
     width: auto;
     object-fit: contain;
     transition: transform 0.2s ease;
@@ -106,14 +106,12 @@ a {
     background-color: var(--discord-color-highlight);
 
     img {
-      transform: scale(1.1); // Subtle pop on hover
+      transform: scale(1.1);
     }
   }
 
-  // Mobile adjustment: Make it slightly larger for "fat fingers"
   @media (max-width: 480px) {
     padding: 12px 20px;
-    width: 100%; // Optional: Makes button full-width on mobile
   }
 }
 
@@ -129,7 +127,6 @@ header {
 
   box-sizing: border-box;
 
-  // Only for testing adding bg color
   background-color: transparent;
 
   display: flex;
@@ -397,30 +394,6 @@ section {
         opacity: 1;
       }
     }
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    //font-size: medium;
-    overflow-x: hidden;
-  }
-
-  header {
-    padding: 10px 5%;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-  }
-
-  #start-section {
-    .discord-stats {
-      padding-inline: 10px !important;
-    }
-  }
-
-  #card-container {
-    margin: 10px;
   }
 }
 
