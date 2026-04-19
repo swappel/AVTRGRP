@@ -43,12 +43,13 @@
         <h3 id="header-avtrgrp">AVTRGRP</h3>
       </div>
 
-      <div class="header-side right-side">
-        <a href=""><button class="discord-join-btn" type="button">Join Discord</button></a>
+      <div class="days-to-avatar">
+        <!-- TODO: Add the countdown thing -->
+        <p>1339 days until Avatar 4</p>
+      </div>
 
-        <div class="light-dark-switch-container">
-          <!-- TODO: Implement the light-dark switch -->
-        </div>
+      <div class="header-side right-side">
+        <span class="discord-join-btn"><a href="https://discord.com/invite/kelutral"><img src="/discord-icon.svg">Discord</a></span>
       </div>
     </header>
 
@@ -60,28 +61,34 @@
 
     <main>
         <section id="start-section">
-          <div class="left">
+          <div class="welcome-header">
             <h2>Welcome to <span style="font-style: italic">the</span> Avatar Community</h2>
-
-            <p>
-              This is a long text about how the server and the rest <br>
-              of the community are amazing. <br>
-              You can find all the crucial information about everything <br>
-              ON THIS WEBSITE... <br> <br>
-              At least I think...
-            </p>
           </div>
 
-          <div class="right discord-stats">
-            <img class="discord-servericon" src="https://cdn.discordapp.com/icons/568087131382087680/5978c6633847b36d075bd54b0870ea79.webp" alt="">
+          <div class="main-content">
+            <div id="start-texts">
+              <h3>About</h3>
 
-            <h2 class="discord-server-name">Avatar</h2>
+              <p>
+                This is a long text about how the server and the rest <br>
+                of the community are amazing. <br>
+                You can find all the crucial information about everything <br>
+                ON THIS WEBSITE... <br> <br>
+                At least I think...
+              </p>
+            </div>
 
-            <div id="server-div">
-              <h4>Member count</h4>
-              <p id="membercount">18,183 Members</p>
+            <div class="discord-stats">
+              <img class="discord-servericon" src="https://cdn.discordapp.com/icons/568087131382087680/5978c6633847b36d075bd54b0870ea79.webp" alt="">
 
-              <span class="discord-join-btn"><a href="https://discord.com/invite/kelutral"><img src="/discord-icon.svg">Discord</a></span>
+              <h2 class="discord-server-name">Avatar</h2>
+
+              <div id="server-div">
+                <h4>Member count</h4>
+                <p id="membercount">18,183 Members</p>
+
+                <span class="discord-join-btn"><a href="https://discord.com/invite/kelutral"><img src="/discord-icon.svg">Discord</a></span>
+              </div>
             </div>
           </div>
         </section>
@@ -187,13 +194,6 @@
 
     <footer>
         <p id="madeby">Made by swappel 2026 ©</p>
-
-        <div class="footer-links">
-            <ul>
-                <!-- TODO: Put links here -->
-                <li></li>
-            </ul>
-        </div>
     </footer>
 <script type="module" src="./src/js/index.js"></script>
 </body>
