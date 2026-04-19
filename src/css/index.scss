@@ -22,6 +22,12 @@
   --link-tag-bg: #56595F;
 }
 
+* {
+  outline: 1px solid red !important;
+
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 
@@ -51,8 +57,57 @@ a {
   }
 }
 
+.discord-join-btn {
+  display: inline-flex; // Allows it to fit content size naturally
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 16px; // Standardized padding
+  background-color: var(--discord-color);
+  border: none;
+  border-radius: 8px; // Matching your card border-radius style
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  width: fit-content;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; // Space between logo and text
+    font-weight: 700;
+    color: white;
+    font-size: 0.95rem; // Matching your card button font size
+    text-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    height: 1.2rem; // Scales based on the text height
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    background-color: var(--discord-color-highlight);
+
+    img {
+      transform: scale(1.1); // Subtle pop on hover
+    }
+  }
+
+  // Mobile adjustment: Make it slightly larger for "fat fingers"
+  @media (max-width: 480px) {
+    padding: 12px 20px;
+    width: 100%; // Optional: Makes button full-width on mobile
+  }
+}
+
 header {
-  position: fixed;
+  position: absolute;
 
   top: 0;
   left: 0;
@@ -93,7 +148,11 @@ header {
 
 #start-section {
 
-  flex-direction: column;
+  margin-top: 80px;
+
+  min-height: 80vh;
+
+  flex-direction: row;
 
   align-items: center;
   justify-content: center;
@@ -136,10 +195,6 @@ header {
     font-weight: 700;
     font-size: xx-large;
   }
-
-  .discord-servericon {
-    border-radius: 100%;
-  }
 }
 
 section {
@@ -150,7 +205,7 @@ section {
 }
 
 .full-section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-title {
@@ -165,43 +220,6 @@ section {
 
 .section-content {
   width: 90%;
-}
-
-.discord-join-btn {
-
-  padding: 10px;
-
-  width: fit-content;
-
-  background-color: var(--discord-color);
-  border: none;
-  border-radius: 5px;
-
-  transition: 0.3s;
-
-  text-wrap: nowrap;
-
-  a {
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 2px;
-
-    font-weight: 700;
-  }
-
-  img {
-    height: 20px;
-    object-fit: contain;
-  }
-}
-
-// TODO: Add an animation for an arrow on the irght of the text
-.discord-join-btn:hover {
-  background-color: var(--discord-color-highlight);
 }
 
 #card-container {
@@ -352,26 +370,27 @@ section {
   }
 }
 
-.discord-join-btn {
-  padding: 10px;
-  width: fit-content;
-  background-color: var(--discord-color);
-  border: none;
-  border-radius: 5px;
-  transition: 0.3s;
-  text-wrap: nowrap;
-
-  a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    font-weight: 700;
-    color: white;
+@media (max-width: 480px) {
+  body {
+    margin-top: 100px;
+    //font-size: medium;
+    overflow-x: hidden;
   }
 
-  &:hover {
-    background-color: var(--discord-color-highlight);
+  header {
+    padding: 10px 5%;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+
+  #start-section {
+    .discord-stats {
+      padding-inline: 10px !important;
+    }
+  }
+
+  #card-container {
+    margin: 10px;
   }
 }
