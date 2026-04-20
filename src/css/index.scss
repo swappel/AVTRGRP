@@ -26,7 +26,7 @@
   --main-blur-value:  10px;
   --frost-blur-value: 6px;
 
-  --font: "Roboto", sans-serif;
+  --font: "Roboto";
 
   --link-card-bg: #46494F;
   --link-tag-bg: #56595F;
@@ -40,23 +40,29 @@
 }
 
 // General definitions
+@media (max-width: 630px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
 
 body {
+  background-image: url("/public/bg.avif");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   margin: 0;
 
-  background-color: var(--background-dark);
   color: var(--text-main-dark);
 
-  font-family: var(--font);
+  font-family: var(--font), sans-serif;
 
   font-size: larger;
 
-  padding: 15px;
-  
   @media (max-width: 630px) {
-    padding: 5px;
-
-    max-width: 100%;
+    min-width: 100%;
 
     overflow-x: hidden;
   }
@@ -136,6 +142,8 @@ a {
 header {
   position: relative;
 
+  background-color: rgba(125, 125, 125, 0.5);
+
   top: 0;
   left: 0;
   width: 100%;
@@ -144,8 +152,6 @@ header {
   padding: 0 5%;
 
   box-sizing: border-box;
-
-  background-color: transparent;
 
   display: flex;
   flex-direction: row;
@@ -179,24 +185,12 @@ header {
 
 // Section style
 section {
+  background-color: var(--background-dark);
+
   display: flex;
   flex-direction: column;
-}
 
-// Start section style
-#start-section {
-  margin-top: 80px !important;
-
-  min-height: 80vh;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  #welcome-header {
-    text-align: center;
-  }
+  padding: 15px;
 
   .section-title {
     font-weight: 600;
@@ -211,9 +205,30 @@ section {
   .section-content {
     width: 90%;
   }
+}
 
-  .full-section {
-    min-height: 100vh;
+.full-section {
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+// Start section style
+#start-section {
+  background: transparent !important;
+
+  backdrop-filter: blur(4px);
+
+  margin-top: 80px !important;
+
+  min-height: 80vh;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  #welcome-header {
+    text-align: center;
   }
 
   .main-content {
