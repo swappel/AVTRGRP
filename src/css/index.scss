@@ -6,6 +6,8 @@
   }
 */
 
+// Base definition
+
 :root {
   --background-dark:  #36393F;
   --background-light: #FFF;
@@ -36,6 +38,8 @@
 
   box-sizing: border-box;
 }
+
+// General definitions
 
 body {
   margin: 0;
@@ -127,6 +131,8 @@ a {
   }
 }
 
+// Header styles
+
 header {
   position: relative;
 
@@ -153,10 +159,8 @@ header {
   }
 
   @media (max-width: 630px) {
-    margin-bottom: 30px !important;
-
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 40px !important;
   }
 
   .header-side {
@@ -173,14 +177,15 @@ header {
   }
 }
 
+// Section style
 section {
   display: flex;
   flex-direction: column;
 }
 
+// Start section style
 #start-section {
-
-  margin-top: 80px;
+  margin-top: 80px !important;
 
   min-height: 80vh;
 
@@ -215,7 +220,7 @@ section {
     display: flex;
     flex-direction: row;
 
-    min-width: 80%;
+    max-width: 80%;
 
     justify-content: center;
 
@@ -231,6 +236,10 @@ section {
 
   #start-texts {
     gap: 40px;
+
+    @media (max-width: 630px) {
+      gap: 10px !important;
+    }
   }
 
   .discord-stats {
@@ -274,8 +283,14 @@ section {
 }
 
 #other-links-section {
+  display: flex;
+
+  align-content: center;
+
   #card-container {
     display: grid;
+
+    align-items: center;
 
     width: 90%;
     margin: 40px;
@@ -283,6 +298,10 @@ section {
     gap: 30px;
 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @media (max-width: 630px) {
+      margin: 10px;
+    }
   }
 
   .link-card {
